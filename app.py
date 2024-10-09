@@ -20,3 +20,4 @@ if hist_boton:
 
  fig = px.scatter(data, x="odometer", y="price") 
  
+ 
