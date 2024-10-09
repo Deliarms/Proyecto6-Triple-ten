@@ -12,12 +12,6 @@ if hist_boton:
     st.plotly_chart(fig)
     
 
-data = pd.read_csv('vehicles_us.csv') 
 
-hist_boton = st.button('Contruir histograma')
-
-if hist_boton:
-
- fig = px.scatter(data, x="odometer", y="price") 
  
  
