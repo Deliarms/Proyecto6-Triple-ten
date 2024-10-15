@@ -3,6 +3,8 @@ import streamlit as st
 import plotly.express as px
 
 data = pd.read_csv('vehicles_us.csv')
+st.header('Proyecto 6')
+st.write('Esta aplicación  esta funcional.')
 
 hist_boton = st.button('Contruir histograma')
 
@@ -10,20 +12,20 @@ if hist_boton:
     st.write('Creacion de histograma de los valores del odometro de los autos')
     fig = px.histogram(data, x='odometer')
     st.plotly_chart(fig, use_container_width=True)
-    
-import pandas as pd
-import plotly.express as px
 
-car_data = pd.read_csv('vehicles_us.csv') 
-fig = px.scatter(car_data, x="odometer", y="price") 
-fig.show() 
+hist_boton = st.button('Grafico de dispersion')
 
-import streamlit as st
+if hist_boton:
+    st.write('Creacion gráfico de dispersión de los valores del odometro de los autos')
+    fig = px.scatter(data, x="odometer", y="price")
+    st.plotly_chart(fig, use_container_width=True)
 
-st.header('Lanzar una moneda')
+scatter_boton = st.button('Contruir scatter_button ')
 
-st.write('Esta aplicación  esta funcional.')
-
-
+if scatter_boton:
+    st.write('Creacion de  scatter_button')
+    fig = px.scatter(data, x='odometer')
+    st.plotly_chart(fig, use_container_width=True)
+    fig.show()
  
- 
+
